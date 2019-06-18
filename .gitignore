@@ -19,7 +19,7 @@ HELP.md
 *.yml
 /src/main/resouces/*.properties
 *.properties
-
+*.cmd
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
