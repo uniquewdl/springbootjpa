@@ -12,6 +12,7 @@ import java.util.Date;
 @Component
 @Configuration
 public class CronTask {
+
     @Scheduled(cron = "0/10 * * * * ? ")
     public void reportCurrentTime() {
         System.out.println("this is my first schedule project==========   current time is :" + dateFormat().format(new Date()));
