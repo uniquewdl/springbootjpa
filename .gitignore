@@ -18,6 +18,7 @@ HELP.md
 *.ipr
 *.yml
 /src/main/resouces/*.properties
+*.properties
 
 ### NetBeans ###
 /nbproject/private/
