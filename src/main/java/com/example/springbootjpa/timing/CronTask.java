@@ -1,7 +1,7 @@
 package com.example.springbootjpa.timing;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
@@ -13,7 +13,7 @@ import java.util.Date;
 @Configuration
 public class CronTask {
 
-    @Scheduled(cron = "0/10 * * * * ? ")
+//    @Scheduled(cron = "0/10 * * * * ? ")
     public void reportCurrentTime() {
         System.out.println("this is my first schedule project==========   current time is :" + dateFormat().format(new Date()));
     }

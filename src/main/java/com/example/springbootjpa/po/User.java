@@ -3,6 +3,8 @@ package com.example.springbootjpa.po;
 import lombok.Data;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 /**
  * @Author: weidl
  * @Description:
@@ -10,7 +12,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class User {
+public class User implements Serializable {
     private String userName;
     private String password;
 }

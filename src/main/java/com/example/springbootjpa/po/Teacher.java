@@ -1,11 +1,13 @@
 package com.example.springbootjpa.po;
+
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
+
 /**
  * @Author: weidl
  * @Description:
@@ -14,13 +16,15 @@ import javax.persistence.Table;
 @Data
 @ToString
 @Entity
-@Table(name="teacher_new")
+@Table(name = "teacher")
 public class Teacher {
     @Id
-    private String id;
-    @Column(name = "name",length = 50)
-    private String tea_name;
-    private String tea_subject;
-    private String tea_school;
-    private String tea_class;
+    private Integer teacher_id;
+    private String teacher_name;
+    private String sex;
+    private Integer age;
+    private Date birthday;
+    private Integer is_value;
+    private Integer deleted;
+    private String name;
 }

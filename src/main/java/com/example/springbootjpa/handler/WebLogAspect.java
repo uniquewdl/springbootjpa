@@ -5,9 +5,9 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
 import javax.servlet.http.HttpServletRequest;
 /**
  * @Author: weidl
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Date: Created in 14:16 2019/5/15
  */
 @Slf4j
-@Component
+//@Component
 @Aspect
 public class WebLogAspect {
     @Pointcut("execution(public * com.example.springbootjpa.controller..*.*(..))")
