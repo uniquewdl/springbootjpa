@@ -1,5 +1,6 @@
 package com.example.springbootjpa.service;
 
+import com.example.springbootjpa.po.Score;
 import com.example.springbootjpa.po.Teacher;
 
 import java.util.List;
@@ -18,5 +19,9 @@ public interface TeacherService {
 
     List<Teacher> findAllQuery();
 
-    List<Object []> joinQuery();
+    List<Object[]> joinQuery();
+
+    List<Teacher> findByName(String teacherName, Integer age);
+
+    List<Score> findAllScore(String name,String teacherName);
 }

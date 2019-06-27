@@ -11,21 +11,25 @@ import java.util.Date;
  * @Description:
  * @Date: Created in 16:23 2019/5/15
  */
-@Table(name = "score",schema="test")
-@Entity
 @Data
 @ToString
+@Entity
+@Table(name = "score")
 public class Score {
     @Id
-    @Column(name="studid")
-    private Integer stuId;
-
-    @Column(name = "stuname")
-    private String stuName;
-
-    @Column(name = "score")
+    private String studid;
+    @Column
+    private String stuname;
+    @Column
     private Integer score;
-
-    @Column(name = "birthday")
+    @Column
     private Date birthday;
+    @Column(name = "teacher_id",updatable = false, insertable = false)
+    private Integer teacher_id;
+    @OneToOne()
+//    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    // @JsonIgnoreProperties(value = {"teacher"}, allowSetters = true)
+    private Teacher teacher;
+
+
 }
